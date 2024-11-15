@@ -74,8 +74,9 @@
       "group": "Endpoint",
       "pages": [
         "api-reference/endpoint/count",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "api-reference/endpoint/image",
+        "api-reference/endpoint/random",
+        "api-reference/endpoint/match"
       ]
     }
   ],
