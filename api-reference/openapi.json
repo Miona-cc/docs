@@ -111,7 +111,7 @@
     },
     "/image/{id}": {
       "get": {
-        "description": "Returns the image with the given ID",
+        "description": "Returns the raw pfp file with the given ID",
         "security": [
           {
             "apiKey": []
@@ -131,11 +131,12 @@
         ],
         "responses": {
           "200": {
-            "description": "Image object with the given ID",
+            "description": "Raw image file",
             "content": {
-              "application/json": {
+              "application/octet-stream": {
                 "schema": {
-                  "$ref": "#/components/schemas/Image"
+                  "type": "string",
+                  "format": "binary"
                 }
               }
             }
@@ -175,7 +176,7 @@
     },
     "/random/{type}": {
       "get": {
-        "description": "Returns a random image of a given type",
+        "description": "Returns a random pfp of a given type",
         "security": [
           {
             "apiKey": []
