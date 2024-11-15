@@ -18,7 +18,7 @@
       "apiKey": {
         "type": "apiKey",
         "in": "header",
-        "name": "Authentication"
+        "name": "Authorization"
       }
     },
     "schemas": {
