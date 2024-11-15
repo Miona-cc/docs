@@ -64,7 +64,7 @@
     }
   ],
   "paths": {
-    "/counts": {
+    "/count": {
       "get": {
         "description": "Returns all of the image types along with the number of images in each type",
         "security": [
