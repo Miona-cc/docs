@@ -48,41 +48,12 @@
     {
       "group": "Get Started",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "introduction"
       ]
     },
-    {
-      "group": "Essentials",
-      "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
-      ]
-    },
-    {
-      "group": "API Documentation",
-      "pages": [
-        "api-reference/introduction"
-      ]
-    },
-    {
-      "group": "Endpoint",
-      "pages": [
-        "api-reference/endpoint/count",
-        "api-reference/endpoint/image",
-        "api-reference/endpoint/random",
-        "api-reference/endpoint/match"
-      ]
-    }
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://linkedin.com/company/mintlify"
+    "discord": "https://discord.gg/miona",
+    "github": "https://github.com/miona-cc"
   }
 }
