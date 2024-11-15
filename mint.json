@@ -52,6 +52,14 @@
       ]
     },
     {
+      "icon": "hand-wave",
+      "iconType": "solid",
+      "group": "Greeting",
+      "pages": [
+        "greeting/welcome"
+      ]
+    },
+    {
       "group": "API Documentation",
       "pages": [
         "api-reference/introduction"
