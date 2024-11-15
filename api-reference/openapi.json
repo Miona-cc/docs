@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Miona API",
-    "description": "An API that will return profile images with given tags",
+    "description": "An API that returns profile images with given tags",
     "license": {
       "name": "MIT"
     },
@@ -10,22 +10,71 @@
   },
   "servers": [
     {
-      "url": "http://images.miona.bot"
+      "url": "https://images.miona.bot"
     }
   ],
+  "components": {
+    "securitySchemes": {
+      "apiKey": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "Authentication"
+      }
+    },
+    "schemas": {
+      "Image": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "Unique identifier for the image",
+            "type": "string",
+            "format": "uuid"
+          },
+          "url": {
+            "description": "URL of the image",
+            "type": "string",
+            "format": "uri"
+          },
+          "type": {
+            "description": "Type of the image",
+            "type": "string"
+          }
+        }
+      },
+      "ImageArray": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Image"
+        }
+      },
+      "Error": {
+        "required": ["error"],
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
   "security": [
     {
       "apiKey": []
     }
   ],
   "paths": {
-    "/count": {
+    "/counts": {
       "get": {
-        "description": "Returns all of the image types along with the numbers of images in that type",
-        "parameters": [],
+        "description": "Returns all of the image types along with the number of images in each type",
+        "security": [
+          {
+            "apiKey": []
+          }
+        ],
         "responses": {
           "200": {
-            "description": "Array of object containing the type and the number of images",
+            "description": "Array of objects containing the type and the number of images",
             "content": {
               "application/json": {
                 "schema": {
@@ -38,7 +87,7 @@
             }
           },
           "401": {
-            "description": "Unexpected error",
+            "description": "Unauthorized error",
             "content": {
               "application/json": {
                 "schema": {
@@ -58,33 +107,61 @@
             }
           }
         }
-      },
-      "post": {
-        "description": "Creates a new plant in the store",
-        "requestBody": {
-          "description": "Plant to add to the store",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewPlant"
-              }
+      }
+    },
+    "/image/{id}": {
+      "get": {
+        "description": "Returns the image with the given ID",
+        "security": [
+          {
+            "apiKey": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the image to retrieve",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
             }
-          },
-          "required": true
-        },
+          }
+        ],
         "responses": {
           "200": {
-            "description": "plant response",
+            "description": "Image object with the given ID",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Plant"
+                  "$ref": "#/components/schemas/Image"
                 }
               }
             }
           },
           "401": {
-            "description": "unauthorized error",
+            "description": "Unauthorized error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Image not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected error",
             "content": {
               "application/json": {
                 "schema": {
@@ -96,28 +173,65 @@
         }
       }
     },
-    "/plants/{id}": {
-      "delete": {
-        "description": "Deletes a single plant based on the ID supplied",
+    "/random/{type}": {
+      "get": {
+        "description": "Returns a random image of a given type",
+        "security": [
+          {
+            "apiKey": []
+          }
+        ],
         "parameters": [
           {
-            "name": "id",
+            "name": "type",
             "in": "path",
-            "description": "ID of plant to delete",
+            "description": "Type of image to retrieve",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int64"
+              "type": "string",
+              "enum": [
+                "malephoto", "femalephoto", "malegif", "banner", "faceless",
+                "femalegif", "cars", "nike", "nsfw", "aesthetic", "cartoon",
+                "jewellry", "shoes", "guns", "drill", "money", "smoking",
+                "animals", "soft", "hellokitty", "besties", "body", "food",
+                "random", "anime", "military"
+              ]
             }
           }
         ],
         "responses": {
-          "204": {
-            "description": "Plant deleted",
-            "content": {}
+          "200": {
+            "description": "Random image of the specified type",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Image"
+                }
+              }
+            }
           },
-          "400": {
-            "description": "unexpected error",
+          "401": {
+            "description": "Unauthorized error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Image type not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected error",
             "content": {
               "application/json": {
                 "schema": {
@@ -128,62 +242,69 @@
           }
         }
       }
-    }
-  },
-  "components": {
-    "schemas": {
-      "ImageCount": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "properties": {
-          "type": {
-            "description": "Type of the image",
-            "type": "string"
-          },
-          "count": {
-            "description": "Number of images of that type in database",
-            "type": "integer"
+    },
+    "/match/{type}": {
+      "get": {
+        "description": "Returns an array with two matching pictures of a given type",
+        "security": [
+          {
+            "apiKey": []
           }
-        }
-      },
-      "NewPlant": {
-        "allOf": [
+        ],
+        "parameters": [
           {
-            "$ref": "#/components/schemas/Plant"
+            "name": "type",
+            "in": "path",
+            "description": "Type of matching images to retrieve",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": ["matchphoto", "matchgif", "matchbanner"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of two matching images of the specified type",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ImageArray"
+                }
+              }
+            }
           },
-          {
-            "required": [
-              "id"
-            ],
-            "type": "object",
-            "properties": {
-              "id": {
-                "description": "Identification number of the plant",
-                "type": "integer",
-                "format": "int64"
+          "401": {
+            "description": "Unauthorized error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Image type not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
               }
             }
           }
-        ]
-      },
-      "Error": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string"
-          }
         }
-      }
-    },
-    "securitySchemes": {
-      "apiKey": {
-        "type": "http",
-        "scheme": "apiKey"
       }
     }
   }
