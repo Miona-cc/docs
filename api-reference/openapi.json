@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "OpenAPI Plant Store",
-    "description": "A sample API that uses a plant store as an example to demonstrate features in the OpenAPI specification",
+    "title": "Miona API",
+    "description": "An API that will return profile images with given tags",
     "license": {
       "name": "MIT"
     },
@@ -10,7 +10,7 @@
   },
   "servers": [
     {
-      "url": "http://sandbox.mintlify.com"
+      "url": "http://images.miona.bot"
     }
   ],
   "security": [
@@ -19,20 +19,10 @@
     }
   ],
   "paths": {
-    "/plants": {
+    "/counts": {
       "get": {
-        "description": "Returns all plants from the system that the user has access to",
-        "parameters": [
-          {
-            "name": "limit",
-            "in": "query",
-            "description": "The maximum number of results to return",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
+        "description": "Returns all of the image types along with the number of images in that type",
+        "parameters": [],
         "responses": {
           "200": {
             "description": "Plant response",
