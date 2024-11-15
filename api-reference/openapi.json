@@ -19,25 +19,25 @@
     }
   ],
   "paths": {
-    "/counts": {
+    "/count": {
       "get": {
-        "description": "Returns all of the image types along with the number of images in that type",
+        "description": "Returns all of the image types along with the numbers of images in that type",
         "parameters": [],
         "responses": {
           "200": {
-            "description": "Plant response",
+            "description": "Array of object containing the type and the number of images",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Plant"
+                    "$ref": "#/components/schemas/ImageCount"
                   }
                 }
               }
             }
           },
-          "400": {
+          "401": {
             "description": "Unexpected error",
             "content": {
               "application/json": {
@@ -73,8 +73,8 @@
               }
             }
           },
-          "400": {
-            "description": "unexpected error",
+          "401": {
+            "description": "unauthorized error",
             "content": {
               "application/json": {
                 "schema": {
@@ -122,19 +122,19 @@
   },
   "components": {
     "schemas": {
-      "Plant": {
+      "ImageCount": {
         "required": [
-          "name"
+          "type"
         ],
         "type": "object",
         "properties": {
-          "name": {
-            "description": "The name of the plant",
+          "type": {
+            "description": "Type of the image",
             "type": "string"
           },
-          "tag": {
-            "description": "Tag to specify the type",
-            "type": "string"
+          "count": {
+            "description": "Number of images of that type in database",
+            "type": "integer"
           }
         }
       },
@@ -160,16 +160,11 @@
       },
       "Error": {
         "required": [
-          "error",
-          "message"
+          "type"
         ],
         "type": "object",
         "properties": {
           "error": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "message": {
             "type": "string"
           }
         }
