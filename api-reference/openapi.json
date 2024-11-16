@@ -44,7 +44,7 @@
       "ImageArray": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/Image"
+          "type": "string",
         }
       },
       "Error": {
