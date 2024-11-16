@@ -1,7 +1,46 @@
-## Welcome Messages
-
+---
+title: Welcome Messages
+description: Send message when a new member joins your server
+---
 Welcome messages are a powerful way to greet new members as soon as they join your server. Miona allows you to create fully customizable welcome messages, giving you the flexibility to introduce newcomers in a way that reflects your community's style and personality. Whether you want to include personalized text, images, or embeds, Miona’s welcome messages can be tailored to provide a unique and engaging introduction for every new member.
 
 <Frame caption="Example Welcome message">
-    <img src="images/welcome/example-welcome.png" />
+    <img src="/images/welcome/example-welcome.png" alt="Example Welcome message"/>
 </Frame>
+
+## How to set it up?
+Firstly we need to create the message. You can do that by running the following command:
+```sh
+/welcome setmessage
+```
+Once you run this command the built-in editor will open and you can start editing your message.
+
+<Frame caption="Editing welcome message with built-in editor">
+    <img src="/images/welcome/editing-welcome.png" alt="Editing welcome message with built-in editor"/>
+</Frame>
+
+By clicking on each button, you can edit the properties of the message/embed, for example by clicking on the `Edit basic information` you can edit the embed `Title`, `Description`, `Color`, etc.
+<Note>
+Built-in editor automatically saves your changes.
+</Note>
+
+Next we need to set the channel where the message will be sent. You can do that by running the following command:
+```sh
+/welcome setchannel <channel>
+```
+
+After this step you should be able to see the message in the channel you set.
+You can test this message by running the following commands:
+```
+/welcome test
+```
+
+## How to disable?
+You can disable boost messages by running the following command:
+```sh
+/boost disable
+```
+
+## Variables
+You can use variables in most messages where Built-in editor is used.
+You can find the list of variables [here](/variables).

@@ -1,0 +1,84 @@
+---
+title: Variables
+description: How to use text variables when configuring Miona
+---
+
+Text variables are placeholders that automatically get replaced with specific information when a message is sent. These variables make it easy to personalize your messages without manually updating them each time. For example, instead of typing out the server's name, you can use `{server_name}`, and it will be replaced with the actual name of your server when the message is displayed.
+Variables can also be scoped to the specific features, for example you can only use `{category_name}` in Ticket Welcome messages only.
+You can find the list of variables by running:
+```/placeholders```
+or feature specific variables by running feature specific command like:
+```/ticket placeholders```
+
+## List of variables
+### Member variables
+These variables are available in messages where a member is involved:
+- `{member_name}` - The member's name - ex. piton01
+- `{member_display_name}` - The member's display name - ex. piton
+- `{member_mention}` - The member's mention - ex. @piton
+- `{member_avatar}` - The member's avatar URL
+- `{member_banner}` - The member's banner URL
+- `{member_created}` - When the member joined Discord - ex. 7/6/2017
+- `{member_id}` - The member's ID - ex. 332434816601554945
+### Server Variables
+These variables can be used with all messages:
+- `{server_name}` - The server's name - ex. miona | support server
+- `{server_icon}` - The server's icon URL
+- `{server_banner}` - The server's banner URL
+- `{server_members}` - The number of members in the server - ex. 1113
+- `{server_roles}` - The number of roles in the server - ex. 33
+- `{server_channels}` - The number of channels in the server - ex. 59
+- `{server_boosts}` - The number of boosts the server has - ex.24
+- `{server_boost_level}` - The server's boost level - ex. 3
+- `{server_boost_tier}` - The server's boost level - ex. 3
+- `{server_created}` - When the server was created - ex. 6/15/2023
+### Boooster Variables
+These variables can be used within a boost message:
+- `{booster_name}` - The booster's name - ex. piton01
+- `{booster_mention}` - The booster's mention - ex. @piton
+- `{booster_display_name}` - The booster's display name - ex. piton
+- `{booster_avatar}` - The booster's avatar URL
+- `{booster_banner}` - The booster's banner URL
+- `{booster_created}` - When the booster joined Discord - ex. 7/6/2017
+- `{booster_id}` - The booster's ID - ex. 332434816601554945
+- `{boost_count}` - How many times the user has boosted - ex. 2
+### Ticket Variables
+Ticket variables can be used withing Ticket Welcome Messages `/tickets edit-welcome-message`
+- `{category_name}` - The name of the category - ex. Support
+- `{category_label}` - The name of the category - ex. Support
+- `{category_description}` - The description of the category (Used with Select Menu Ticket Panels)
+- `{category_id}` - The ID of the category - ex. support-random (rarely used)
+- `{category_count}` - The number of categories in the server ex. 2 (rarely used)
+### Ticket Name Format Variables
+These variables can be used when editing the Ticket name format `/tickets format`
+- `{member_name}` - The name of the member - ex. piton01
+- `{member_display_name}` - The display name of the member - ex. piton
+- `{random}` - Four random numbers - ex. 1231
+- `{random_emoji}` - Random emoji - ex. 🎉
+- `{ticket_count}` - Ticket count for that category - ex. 10
+### Voice Master Room Name Format Variables
+These variables are used when editing the Voice Room name format `/voicemaster settings`
+- `{member_name}` - The name of the member - ex. piton01
+- `{member_display_name}` - The display name of the member - ex. piton
+- `{random}` - Four random numbers - ex. 1231
+- `{random_emoji}` - Random emoji - ex. 🎉
+### Invite Tracker Variables
+These variables are used to replace information about the inviter who invited the member in invites messages:
+- `{inviter_name}` - The inviter's name - ex. piton01
+- `{inviter_display_name}` - The inviter's display name - ex. piton
+- `{inviter_mention}` - The inviter's mention - ex. @piton
+- `{inviter_avatar}` - The inviter's avatar URL
+- `{inviter_banner}` - The inviter's banner URL
+- `{inviter_created}` - When the inviter joined Discord - ex. 7/6/2017
+- `{inviter_id}` - The inviter's ID - ex. 332434816601554945
+- `{inviter_invites}` - The number of invites the inviter has - ex. 12
+- `{inviter_totalInvites}` - The number of invites the inviter has - ex. 12
+- `{inviter_bonusInvites}` - The number of bonus invites the inviter has - ex. 0
+- `{inviter_fakeInvites}` - The number of fake invites the inviter has - ex. 1
+- `{inviter_leftInvites}` - The number of left invites the inviter has - ex. 3
+- `{inviter_leaves}` - The number of left invites the inviter has - ex. 3
+- `{invite_code}` - The invite code - ex. /miona
+- `{invite_uses}` - The number of times the invite has been used - ex. 0
+<Note>
+If you want to use the replace information about the member in invite messages, you can use the [Member Variables](#member-variables) from above.
+</Note>

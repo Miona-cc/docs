@@ -1,0 +1,50 @@
+---
+title: Boost Messages
+description: Send message when a member boosts your server
+---
+
+Boost messages are special announcements sent whenever a member boosts your server. Miona allows you to create fully customizable boost messages, making it easy to celebrate and show appreciation for those who support your community. You can personalize these messages with text, images, or embeds, adding a unique touch to each boost. Boost messages are a great way to thank your boosters and recognize their contribution, making them feel valued and encouraging others to do the same.
+
+<Frame caption="Example Boost message">
+    <img src="/images/boost/example-boost.png" alt="Example Boost message"/>
+</Frame>
+
+
+<Note>
+Boost messages require a `System Messages Channel` and `Send a message when somone boosts this server` enabled in the server settings as shown in the picutre below.
+<img src="/images/boost/boost-message-requirement.png" alt="Server settings"/>
+This channel doesn't need to be visible to everyone, just the bot needs to be able to see messages sent by discord.
+</Note>
+
+## How to set it up?
+Firstly we need to create the message. You can do that by running the following command:
+```sh
+/boost setmessage
+```
+
+Once you run this command the built-in editor will open and you can start editing your message.
+
+<Frame caption="Editing boost message with built-in editor">
+    <img src="/images/boost/editing-boost.png" alt="Editing boost message with built-in editor"/>
+</Frame>
+
+By clicking on each button, you can edit the properties of the message/embed, for example by clicking on the `Edit basic information` you can edit the embed `Title`, `Description`, `Color`, etc.
+<Note>
+Built-in editor automatically saves your changes.
+</Note>
+
+After you are done editing your message, your message should be enabled and should be sent to every new member.
+
+You can test this message by running the following commands:
+```
+/boost test
+```
+
+## How to disable?
+You can disable boost messages by running the following command:
+```sh
+/boost disable
+```
+
+## Variables
+You can find the list of variables [here](/variables).

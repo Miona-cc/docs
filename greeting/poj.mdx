@@ -1,0 +1,35 @@
+---
+title: Ping On Join
+description: Ping a member in a channel when they join your server.
+---
+
+Ping on Join (POJ) is a feature that pings a new member in a specific channel as soon as they join the server. This directs their attention to that channel first, ensuring they see important information, guidelines, or introductions immediately. POJ is a great way to highlight key channels for newcomers, making sure they don’t miss important messages or community updates right from the start.
+
+<Frame caption="Example POJ message">
+    <img src="/images/poj/example-poj.png" alt="Example POJ message"/>
+</Frame>
+
+These pings can be sent either in a batch or individually, with a time window of 1 second. This means that if two members join the server within the same second, only one ping will be sent to avoid overlapping notifications. The time window ensures that pings are efficiently managed without excessive spamming when multiple members join at the same time.
+
+## How to set it up?
+
+To set it up you just need to run the following command:
+```sh
+/poj start <channel> [delay]
+```
+The `[delay]` argument is the time it takes the bot to remove the ping from the channel, by default it's set to `1 second`.
+After this step the POJ feature should be enabled and working.
+
+## How to disable?
+
+You can disable POJ messages by running the following command:
+```sh
+/poj stop [channel]
+```
+
+# How to see where POJ is enabled?
+
+You can see where POJ is enabled by running the following command:
+```sh
+/poj list
+```

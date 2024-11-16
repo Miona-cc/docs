@@ -1,0 +1,51 @@
+---
+title: JoinDM Messages
+description: Send direct message when a member joins your server
+---
+
+Join DM messages are personalized messages sent directly to a user’s DM when they join your server. Miona allows you to create fully customizable join DM messages, which can be a great way to introduce new members to your community. These messages are perfect for sending your server’s advertisement, rules, or any important information that helps users get started. With join DM messages, you can provide a welcoming, informative experience right in the user’s inbox, making it easier to engage and guide new members.
+
+<Frame caption="Example Join DM message">
+    <img src="/images/joindm/example-joindm.png" alt="Example Join DM message"/>
+</Frame>
+
+
+## How to set it up?
+Firstly we need to create the message. You can do that by running the following command:
+```sh
+/joindm setmessage
+```
+
+
+Once you run this command the built-in editor will open and you can start editing your message.
+
+<Frame caption="Editing join DM message with built-in editor">
+    <img src="/images/joindm/editing-joindm.png" alt="Editing join DM message with built-in editor"/>
+</Frame>
+
+
+By clicking on each button, you can edit the properties of the message/embed, for example by clicking on the `Edit basic information` you can edit the embed `Title`, `Description`, `Color`, etc.
+<Note>
+Built-in editor automatically saves your changes.
+</Note>
+
+Next we need to set the channel where the message will be sent. You can do that by running the following command:
+```sh
+/joindm setchannel <channel>
+```
+
+After this step you should be able to see the message in the channel you set.
+You can test this message by running the following commands:
+```
+/joindm test
+```
+
+## How to disable?
+You can disable join DM messages by running the following command:
+```sh
+/joindm disable
+```
+
+## Variables
+You can use variables in most messages where Built-in editor is used.
+You can find the list of variables [here](/variables).
