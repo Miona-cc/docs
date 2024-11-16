@@ -22,29 +22,25 @@
       }
     },
     "schemas": {
-      "Image": {
+      "ImageCount": {
         "type": "object",
         "properties": {
-          "id": {
-            "description": "Unique identifier for the image",
-            "type": "string",
-            "format": "uuid"
-          },
-          "url": {
-            "description": "URL of the image",
-            "type": "string",
-            "format": "uri"
-          },
           "type": {
-            "description": "Type of the image",
             "type": "string"
+          },
+          "count": {
+            "type": "integer"
           }
         }
       },
+      "Image": {
+        "type": "string"  
+      },
       "ImageArray": {
         "type": "array",
+        "size": 2,
         "items": {
-          "type": "string",
+          "type": "string"
         }
       },
       "Error": {
