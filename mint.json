@@ -53,6 +53,14 @@
       ]
     },
     {
+      "group": "AutoPost",
+      "pages": [
+        "autopost/autopfp",
+        "autopost/automatch",
+        "autopost/automeme"
+      ]
+    },
+    {
       "icon": "hand-wave",
       "iconType": "solid",
       "group": "Greeting",

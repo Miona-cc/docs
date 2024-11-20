@@ -1,0 +1,71 @@
+---
+title: AutoMatch
+description: Automatically send two random matching profile pictures in a channel.
+icon: "images"
+iconType: "solid"
+---
+
+AutoPFP is a feature that sends random profile pictures in a channel to engage your community. It provides a great way to find new matching profile pictures for you and your beloved once.
+
+<Frame>
+    <img src="/images/autopost/automatch/example-automatch.png" alt="Example AutoMatch message"/>
+</Frame>
+
+# How to set it up?
+
+To set it up you just need to run the following command:
+```sh
+/autopfp start <delay> [channel]
+```
+
+The `<delay>` argument is the delay between the pfps and it's required.
+<Warning>
+    The minimum `<delay>` is `1 minute` and if you want to decrease the delay please consider supporting us on our patreon store [here](https://patreon.com/MionaBot).
+
+    Also there is a limit of `1` automatch channel per server, if you want to increase this limit please consider supporting us on our patreon store [here](https://patreon.com/MionaBot). 
+</Warning>
+
+After this step you need to choose the types of PFPs that you want the bot to send.
+<Frame caption="Selecting PFP types">
+    <img src="/images/autopost/automatch/example-automatch-choosing-types.png" alt="Selecting PFP types"/>
+</Frame>
+
+<Note>
+You can select multiple image types for one channel.
+</Note>
+
+After setting up the autopfp, you might be asked to vote for the bot if you haven't already.
+<Note>
+The bot will ask you to vote every **48 hours**.
+
+Servers with active `Premium` and `Platinum` subscriptions are not required to vote.
+Check out our [Patreon Store](https://patreon.com/MionaBot) to learn more.
+</Note>
+
+<Frame caption="Example Voting message">
+    <img src="/images/autopost/autopfp/example-autopfp-voting.png" alt="Example Vpting message"/>
+</Frame>
+
+<Warning>
+When you are voting, please use the link that is given to you by the bot or by running `/vote` in your server, because the link given by the bot is unique and identifies your server. This is the only way for us to know for which server you've voted.
+</Warning>
+
+After you've voted the bot should start sending matching PFPs of the desired types.
+
+# How to disable?
+You can disable AutoMatch by running the following command:
+```sh
+/automatch stop [channel]
+```
+If you don't specify a channel, the channel where you are running the command will be used.
+
+# How to see your AutoMatch channels?
+
+You can see your AutoMatch channels by running the following command:
+```sh
+/autopfp list
+```
+
+<Frame caption="Example AutoMatch list">
+    <img src="/images/autopost/autopfp/example-automatch-list.png" alt="Example AutoMatch list"/>
+</Frame>
