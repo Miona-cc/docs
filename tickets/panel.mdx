@@ -1,0 +1,148 @@
+---
+icon: "ticket"
+iconType: "solid"
+title: Creating a Panel
+description: Easily create and manage ticket panels and send them to a dedicated channel in your server.
+---
+
+Tickets are one of Miona's most powerful features, letting you set up ticket panels with [categories](/tickets/category). Everything is fully customizable, from embeds to ticket channel names so you can create panels that match your servers style. With Miona Tickets, your members can easily contact you for support, and you will have an organized way to provide the help they need.
+
+<Frame>
+    <img src="/images/tickets/example-panel.png" alt="Example AutoMatch message"/>
+</Frame>
+
+## How to set it up?
+
+Firstly we need to create a panel, using the following command:
+```sh
+/tickets create-panel <name> <type>
+```
+
+<Warning>
+You can create 1 ticket panel by default and can have up to 3 with [premium](https://www.patreon.com/MionaBot)!
+</Warning>
+
+Now lets edit our panel using the following command:
+```sh
+/tickets edit-panel <name>
+```
+
+Once you run this command the built-in editor will open and you can start editing your message.
+
+<Tip>
+Don't forget! You can always use the [variables](/tickets/panel#what-variables-can-i-use) when building messages.
+</Tip>
+
+<Frame>
+    <img src="/images/tickets/example-editpanel.png" alt="Example Edit panel message"/>
+</Frame>
+
+<Note>
+You may not be able to edit some of the message components such as footer. That requires [premium](https://www.patreon.com/MionaBot)!
+</Note>
+
+When you finished building your message **you must add at least one [category](/tickets/category) to the panel** and then use the following command to send your panel:
+```sh
+/tickets send-panel <name> <channel>
+```
+
+## Additional information
+
+Listed below are some customizable features of the ticketing system.
+
+### How can I change the tickets welcome message?
+
+You can change it for a panel using the following command:
+```sh
+/tickets edit-welcome-message <panel>
+```
+
+Once you run this command the built-in editor will open and you can start editing your message.
+
+<Frame>
+    <img src="/images/tickets/example-welcome.png" alt="Example Welcome panel"/>
+</Frame>
+
+### How can I add/remove ticket access roles?
+
+You can add a ticket access role for a panel using the following command:
+```sh
+/tickets access-roles-add <panel> <role>
+```
+
+You can remove a ticket access role from a panel using the following command:
+```sh
+/tickets access-roles-remove <panel> <role>
+```
+
+To list all of the ticket access roles you can use the following command: 
+
+```sh
+/tickets access-roles-list <panel>
+```
+
+### How can I add/remove roles that will be pinged upon ticket creation?
+
+You can add a ticket ping role for a panel using the following command:
+```sh
+/tickets ping-roles-add <panel> <role>
+```
+
+You can remove a ticket ping role from a panel using the following command:
+```sh
+/tickets ping-roles-remove <panel> <role>
+```
+
+To list all of the ticket ping roles you can use the following command: 
+
+```sh
+/tickets ping-roles-list <panel>
+```
+
+### How can I change the tickets channel name format?
+
+You can change it using the following command:
+```sh
+/tickets format <format>
+```
+
+### How can I change the global tickets settings ( for all panels )?
+
+You can change the global tickets settings by running the following command:
+```sh
+/tickets settings
+```
+
+You will be able to edit the following settings:
+
+- Lock the channel the panel is sent to ( Yes/No )
+- Deletion of the ticket channel when the ticket is closed ( Yes/No )
+- Save transcripts when a ticket is closed ( Yes/No )
+- Confirm before closing tickets ( Yes/No )
+- A limit of the tickets a user can have ( No limit/Per Server/Per panel/Per Category )
+- Send ticket logs to channel ( Channel )
+
+<Frame>
+    <img src="/images/tickets/example-settings.png" alt="Example Settings panel"/>
+</Frame>
+
+### How can I change the tickets log channel?
+
+You can change the ticket log channel by using the following command:
+```sh
+/tickets logs <channel>
+```
+
+### How do I delete a panel?
+
+To delete a panel simply run the following command:
+```sh
+/tickets delete-panel <name> 
+```
+
+### What variables can I use?
+
+You can use variables in most messages where Built-in editor is used. You can get a list of all the variables [here](/variables) or by running the following command:
+```sh
+/tickets variables 
+```

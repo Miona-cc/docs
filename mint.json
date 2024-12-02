@@ -77,7 +77,8 @@
       "iconType": "solid",
       "group": "Tickets",
       "pages": [
-        "tickets/introduction"
+        "tickets/panel",
+        "tickets/category"
       ]
     },
     {
