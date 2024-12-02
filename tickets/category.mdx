@@ -1,0 +1,52 @@
+---
+icon: "list"
+iconType: "solid"
+title: Adding Categories
+description: Create and assign ticket categories to ticket panels.
+---
+
+Each ticket panel must have at least one assigned category to function. A category consists of a unique name and the channel (category) where tickets will be created. This allows you to add multiple categories for each panel.
+
+<Frame>
+    <img src="/images/tickets/example-category.png" alt="Example category panel"/>
+</Frame>
+
+## How to add a ticket category?
+
+To add a ticket category to a panel simply use the following command:
+
+```sh
+/tickets categories add <panel> <category>
+```
+
+A form will appear, where you need to fill the name of the category, description and the emoji.
+Once completed, your category has been succesfully added to the selected panel!
+
+<Note>
+You can send a panel using the following command:
+```sh
+/tickets send-panel <panel> <channel>
+```
+</Note>
+
+
+## How to edit a ticket category?
+
+To edit a category of a panel use the following command:
+```sh
+/tickets categories edit <panel> <category>
+```
+
+## How to remove a ticket category?
+
+To remove a category from a panel use the following command:
+```sh
+/tickets categories remove <panel> <category>
+```
+
+## How to see a list of the ticket categories?
+
+To see a list of the categories for a panel simply run the following command:
+```sh
+/tickets categories list <panel>
+```
