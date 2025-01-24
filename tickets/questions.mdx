@@ -1,0 +1,75 @@
+---
+icon: "question"
+iconType: "solid"
+title: Questions
+description: Create and assign questions to a panel.
+---
+
+This feature allows you to set up custom questions that users must answer before creating a ticket. The questions and their responses will be included in the initial ticket creation message.
+
+<Frame>
+    <img src="/images/tickets/example-question.png" alt="Example questions form"/>
+</Frame>
+
+To set up a ticket panel with questions, you first need to create a `Panel with Questions`, as only this panel type supports questions.
+
+```sh
+/tickets create-panel <name> <type:Panel with questions>
+```
+
+After running the command above you will have to choose a default category for tickets to be created in, and add some questions.
+
+<Warning>
+A panel can have up to 5 questions, with at least 1 question required for the panel to function.
+</Warning>
+
+<Frame>
+    <img src="/images/tickets/example-questionsetup.png" alt="Example questions setup"/>
+</Frame>
+
+<Note>
+After setting up your panel and its questions make sure to send your panel to a channel! Please take a look at [this guide](/tickets/panel) for more info. 
+
+```sh
+/tickets send-panel <name> <channel>
+```
+
+</Note>
+
+You've successfully setup a panel with questions! Have a cup of tea.
+
+<Frame>
+    <img src="/images/tickets/example-questioncreated.png" alt="Example questions created"/>
+</Frame>
+
+## How can I add a question to the panel?
+
+You can add questions to a panel using the following command:
+
+```sh
+/tickets questions add <panel> 
+```
+
+## How can I remove a question from the panel?
+
+You can remove a question from the panel using this command:
+
+```sh
+/tickets questions remove <panel> <question>
+```
+
+## How can I edit a question?
+
+To edit an existing question, use the command below:
+
+```sh
+/tickets questions edit <panel> <question>
+```
+
+## How can I see a list of all the questions for the panel?
+
+You can view a list of all questions assigned to a panel with this command:
+
+```sh
+/tickets questions list <panel>
+```

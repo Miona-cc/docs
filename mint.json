@@ -78,7 +78,16 @@
       "group": "Tickets",
       "pages": [
         "tickets/panel",
-        "tickets/category"
+        "tickets/category",
+        "tickets/questions"
+      ]
+    },
+    {
+      "icon": "party-horn",
+      "iconType": "solid",
+      "group": "Giveaways",
+      "pages": [
+        "giveaways/giveaway"
       ]
     },
     {
