@@ -1,0 +1,83 @@
+---
+title: Starting a Giveaway
+description: Start a giveaway in a channel of your choice.
+icon: "party-horn"
+iconType: "solid"
+---
+
+Giveaways are a simple yet a popular method for hosting and distributing prizes. You can create customizable giveaways for your members in a dedicated channel with the duration of your choice. Your members can easily join and leave the giveaway.
+
+<Frame>
+    <img src="/images/giveaways/example-giveaway.png" alt="Example giveaway"/>
+</Frame>
+
+## How to set it up?
+
+Firstly we need to start the giveaway by running the following command:
+
+```sh
+/giveaway start
+```
+
+Once you run this command a form will appear, you can fill in the information about your giveaway and click the submit button to start it!
+
+<Frame>
+    <img src="/images/giveaways/example-form.png" alt="Example giveaway"/>
+</Frame>
+
+The embed message with the giveaway information and the join button will be sent to the channel that the command was used in.
+
+## How to edit giveaway settings?
+
+You can simply run the following command:
+
+```sh
+/giveaway settings
+```
+
+You will be able to edit the giveaway embed color, join button emoji and label.
+
+<Frame>
+    <img src="/images/giveaways/example-settings.png" alt="Example giveaway"/>
+</Frame>
+
+## How can I reroll a giveaway?
+
+A giveaway can be rerolled when a winner was drawn using the following command:
+
+```sh
+/giveaway list
+```
+A new winner will be drawn immediately.
+
+## How can I forcibly end a giveaway?
+
+You can end a giveaway using the following command:
+
+```sh
+/giveaway end <giveaway_id>
+```
+
+A winner will be drawn immediately.
+
+## How can I delete a giveaway?
+
+You can delete a giveaway using the following command:
+
+```sh
+/giveaway delete <giveaway_id>
+```
+
+This will delete the giveaway immediately and a winner will not be drawn.
+
+## How can I see a list of active giveaways?
+
+You can see a list of all the active giveaways by running the following command:
+
+```sh
+/giveaway list
+```
+
+<Frame>
+    <img src="/images/giveaways/example-list.png" alt="Example giveaway list"/>
+</Frame>
