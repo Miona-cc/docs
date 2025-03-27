@@ -64,6 +64,12 @@ These variables are used when editing the Voice Room name format `/voicemaster s
 - `{member_display_name}` - The display name of the member - ex. piton
 - `{random}` - Four random numbers - ex. 1231
 - `{random_emoji}` - Random emoji - ex. 🎉
+### Channel Variables
+These variables can be used with sticky messages:
+- `{channel_name}` - The name of the channel - ex. general
+- `{channel_mention}` - The mention of the channel - ex. #general
+- `{channel_id}` - The ID of the channel - ex. 332434816601554945
+- `{channel_created}` - When the channel was created - ex. 7/6/2017
 ### Invite Tracker Variables
 These variables are used to replace information about the inviter who invited the member in invites messages:
 - `{inviter_name}` - The inviter's name - ex. piton01
@@ -82,5 +88,9 @@ These variables are used to replace information about the inviter who invited th
 - `{invite_code}` - The invite code - ex. /miona
 - `{invite_uses}` - The number of times the invite has been used - ex. 0
 <Note>
-If you want to use the replace information about the member in invite messages, you can use the [Member Variables](#member-variables) from above.
+If you want to replace information about the member in invite messages, you can use the [Member Variables](#member-variables) from above.
 </Note>
+### General Variables
+These variables can be used with all messages:
+- `{date}` - The current date - ex. 7/6/2017
+- `{time}` - The current time - ex. 12:00 PM
