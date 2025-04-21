@@ -83,15 +83,6 @@
       ]
     },
     {
-      "icon": "party-horn",
-      "iconType": "solid",
-      "group": "More Features",
-      "pages": [
-        "more-features/giveaway",
-        "more-features/autoresponders"
-      ]
-    },
-    {
       "icon": "user-tag",
       "iconType": "solid",
       "group": "Roles",
@@ -99,6 +90,15 @@
         "roles/auto-role",
         "roles/mass-role",
         "roles/reaction-roles"
+      ]
+    },
+    {
+      "icon": "party-horn",
+      "iconType": "solid",
+      "group": "More Features",
+      "pages": [
+        "more-features/giveaway",
+        "more-features/autoresponders"
       ]
     },
     {
