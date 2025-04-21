@@ -85,9 +85,9 @@
     {
       "icon": "party-horn",
       "iconType": "solid",
-      "group": "Giveaways",
+      "group": "More Features",
       "pages": [
-        "giveaways/giveaway"
+        "more-features/giveaway"
       ]
     },
     {

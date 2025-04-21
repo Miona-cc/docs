@@ -1,0 +1,89 @@
+---
+title: Giveaways
+description: Host interactive giveaways in any channel you choose.
+icon: "party-horn"
+iconType: "solid"
+---
+
+Giveaways are a fun and effective way to engage your community and distribute rewards. You can set up fully customizable giveaways in any channel, choose how long they last, and let members join or leave with ease.
+
+<Frame>
+    <img src="/images/giveaways/example-giveaway.png" alt="Example giveaway"/>
+</Frame>
+
+## 🎉 How to Start a Giveaway
+
+To begin a giveaway, simply run:
+
+```sh
+/giveaway start
+```
+
+After running the command, a form will appear where you can fill in the giveaway details such as:
+- Prize
+- Duration
+- Number of winners
+- Description
+
+Click **Submit** to launch the giveaway!
+
+<Frame>
+    <img src="/images/giveaways/example-form.png" alt="Giveaway form example"/>
+</Frame>
+
+A giveaway embed will be posted in the current channel, along with a join button for members.
+
+## ⚙️ Editing Giveaway Settings
+
+To customize the appearance and behavior of giveaways, use:
+
+```sh
+/giveaway settings
+```
+
+You’ll be able to modify:
+- Embed color
+- Join button emoji
+- Button label
+
+<Frame>
+    <img src="/images/giveaways/example-settings.png" alt="Giveaway settings"/>
+</Frame>
+
+## 🔁 Rerolling a Winner
+
+Need to pick a new winner? After a giveaway ends, run:
+
+```sh
+/giveaway reroll <giveaway_id> [winners_count]
+```
+
+## ⏹️ Ending a Giveaway Early
+
+To forcibly end an ongoing giveaway and pick a winner immediately, use:
+
+```sh
+/giveaway end <giveaway_id>
+```
+
+## 🗑️ Deleting a Giveaway
+
+If you want to cancel a giveaway without drawing a winner, use:
+
+```sh
+/giveaway delete <giveaway_id>
+```
+
+The giveaway will be removed immediately.
+
+## 📋 Viewing Active Giveaways
+
+To see a list of all currently active giveaways, run:
+
+```sh
+/giveaway list
+```
+
+<Frame>
+    <img src="/images/giveaways/example-list.png" alt="Active giveaways list"/>
+</Frame>

@@ -1,55 +1,64 @@
 ---
 icon: "list"
 iconType: "solid"
-title: Adding Categories
-description: Create and assign ticket categories to ticket panels.
+title: Managing Categories
+description: Create and assign ticket categories to panels for organized support.
 ---
 
-Each ticket panel must have at least one assigned category to function. A category consists of a unique name and the channel (category) where tickets will be created. This allows you to add multiple categories for each panel.
+Each ticket panel must have at least one assigned **category** to work properly. A category defines where the ticket channels will be created and helps keep your support system organized.
+
+You can assign multiple categories to a single panel, giving users options to choose from when opening a ticket.
 
 <Frame>
     <img src="/images/tickets/example-category.png" alt="Example category panel"/>
 </Frame>
 
-<Warning>Please note that `Question Panels` are not supported for categories.</Warning>
+<Warning>
+Question Panels do not support categories.
+</Warning>
 
+## 🛠️ Adding a Ticket Category
 
-## How to add a ticket category?
-
-To add a ticket category to a panel simply use the following command:
+To add a new category to a panel, use the command below:
 
 ```sh
 /tickets categories add <panel> <category>
 ```
 
-A form will appear, where you need to fill the name of the category, description and the emoji.
-Once completed, your category has been succesfully added to the selected panel!
+After running this command, a form will appear where you can provide:
+- **Name** of the category
+- **Description**
+- **Emoji**
+
+Once submitted, the category will be added to the selected panel!
 
 <Note>
-You can send a panel using the following command:
+Need to display your panel? Use:
 ```sh
 /tickets send-panel <panel> <channel>
 ```
 </Note>
 
+## ✏️ Editing a Ticket Category
 
-## How to edit a ticket category?
+To modify a category's details, run:
 
-To edit a category of a panel use the following command:
 ```sh
 /tickets categories edit <panel> <category>
 ```
 
-## How to remove a ticket category?
+## ❌ Removing a Ticket Category
 
-To remove a category from a panel use the following command:
+To remove an existing category from a panel, use:
+
 ```sh
 /tickets categories remove <panel> <category>
 ```
 
-## How to see a list of the ticket categories?
+## 📄 Listing All Categories
 
-To see a list of the categories for a panel simply run the following command:
+To view all categories assigned to a panel, run:
+
 ```sh
 /tickets categories list <panel>
 ```

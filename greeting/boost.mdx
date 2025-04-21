@@ -1,55 +1,66 @@
 ---
 title: Boost Messages
-description: Send message when a member boosts your server
+description: Send a message when a member boosts your server
 icon: "hands-holding-diamond"
 iconType: "solid"
 ---
 
-Boost messages are special announcements sent whenever a member boosts your server. Miona allows you to create fully customizable boost messages, making it easy to celebrate and show appreciation for those who support your community. You can personalize these messages with text, images, or embeds, adding a unique touch to each boost. Boost messages are a great way to thank your boosters and recognize their contribution, making them feel valued and encouraging others to do the same.
+Boost messages are special announcements sent whenever a member boosts your server. Miona allows you to create fully customizable boost messages, making it easy to celebrate and show appreciation for those who support your community.
 
-<Frame caption="Example Boost message">
+💬 You can personalize these messages with text, images, or embeds, adding a unique touch to each boost. It's a great way to thank your boosters 🙌 and highlight their contribution, encouraging others to join in too!
+
+<Frame caption="📸 Example Boost message">
     <img src="/images/boost/example-boost.png" alt="Example Boost message"/>
 </Frame>
 
-
 <Note>
-Boost messages require a `System Messages Channel` and `Send a message when somone boosts this server` enabled in the server settings as shown in the picutre below.
+Boost messages require a `System Messages Channel` and the option `Send a message when someone boosts this server` enabled in your server settings.
+
 <img src="/images/boost/boost-message-requirement.png" alt="Server settings"/>
-This channel doesn't need to be visible to everyone, just the bot needs to be able to see messages sent by discord.
+
+This channel doesn’t need to be visible to everyone — only the bot must have permission to read messages in it.
 </Note>
 
-## How to set it up?
-Firstly we need to create the message. You can do that by running the following command:
+## 🚀 How to Set It Up
+
+First, create your boost message by using the following command:
+
 ```sh
 /boost setmessage
 ```
 
-Once you run this command the built-in editor will open and you can start editing your message.
+Once you run this, the built-in editor will open so you can start customizing your message.
 
-<Frame caption="Editing boost message with built-in editor">
+<Frame caption="📝 Editing boost message with built-in editor">
     <img src="/images/boost/editing-boost.png" alt="Editing boost message with built-in editor"/>
 </Frame>
 
-By clicking on each button, you can edit the properties of the message/embed, for example by clicking on the `Edit basic information` you can edit the embed `Title`, `Description`, `Color`, etc.
+Use the buttons to update message properties. For example, click **Edit basic information** to modify the embed title, description, color, and more.
+
 <Note>
-Built-in editor automatically saves your changes.
+Changes made in the built-in editor are saved automatically.
 </Note>
 
-Next we need to set the channel where the message will be sent. You can do that by running the following command:
+Next, set the channel where the boost message will be sent:
+
 ```sh
 /boost setchannel <channel>
 ```
 
-Now you can test this message by running the following commands:
-```
+✅ You can test your boost message anytime using:
+
+```sh
 /boost test
 ```
 
-## How to disable?
-You can disable boost messages by running the following command:
+## ❌ How to Disable Boost Messages
+
+To disable boost messages, simply run:
+
 ```sh
 /boost removechannel
 ```
 
-## Variables
-You can find the list of variables [here](/variables).
+## 🧠 Variables
+
+You can view the list of available variables [here](/variables).
