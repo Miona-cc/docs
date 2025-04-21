@@ -1,75 +1,103 @@
 ---
 icon: "question"
 iconType: "solid"
-title: Questions
-description: Create and assign questions to a panel.
+title: Custom Questions
+description: Create ticket panels with custom questions.
 ---
 
-This feature allows you to set up custom questions that users must answer before creating a ticket. The questions and their responses will be included in the initial ticket creation message.
+## ✨ Overview
+
+This feature allows you to create ticket panels that include **custom questions** users must answer before a ticket is created. Their responses will be included in the initial ticket message, providing context right from the start.
 
 <Frame>
-    <img src="/images/tickets/example-question.png" alt="Example questions form"/>
+  <img src="/images/tickets/example-question.png" alt="Example questions form"/>
 </Frame>
 
-To set up a ticket panel with questions, you first need to create a `Panel with Questions`, as only this panel type supports questions.
+---
+
+## 🎛️ Creating a Panel with Questions
+
+To begin, you'll need to create a **Panel with Questions**. Only this panel type supports adding custom questions.
 
 ```sh
 /tickets create-panel <name> <type:Panel with questions>
 ```
 
-After running the command above you will have to choose a default category for tickets to be created in, and add some questions.
+Once created, you'll be prompted to:
+
+- Choose a default category where the tickets will be created
+- Add your custom questions
 
 <Warning>
-A panel can have up to 5 questions, with at least 1 question required for the panel to function.
+Each panel can contain **1 to 5 questions**. At least **1 question** is required for the panel to function.
 </Warning>
 
 <Frame>
-    <img src="/images/tickets/example-questionsetup.png" alt="Example questions setup"/>
+  <img src="/images/tickets/example-selecting-default-category-prompt.png" alt="Example selecting default category"/>
 </Frame>
 
-<Note>
-After setting up your panel and its questions make sure to send your panel to a channel! Please take a look at [this guide](/tickets/panel) for more info. 
+---
+
+## 📤 Sending the Panel to a Channel
+
+After setting up your panel and questions, make sure to send the panel to a specific channel so users can interact with it:
 
 ```sh
 /tickets send-panel <name> <channel>
 ```
 
+<Note>
+Need help sending your panel? Check out the [Panel Setup Guide](/tickets/panel) for detailed instructions.
 </Note>
 
-You've successfully setup a panel with questions! Have a cup of tea.
-
 <Frame>
-    <img src="/images/tickets/example-questioncreated.png" alt="Example questions created"/>
+  <img src="/images/tickets/example-questioncreated.png" alt="Example questions created"/>
 </Frame>
 
-## How can I add a question to the panel?
+---
 
-You can add questions to a panel using the following command:
+## ⚙️ Managing Panel Questions
+
+### ➕ Add a Question
+
+To add a new question to your panel:
 
 ```sh
-/tickets questions add <panel> 
+/tickets questions add <panel>
 ```
+<Warning>
+Each panel can contain **1 to 5 questions**. At least **1 question** is required for the panel to function.
+</Warning>
+---
 
-## How can I remove a question from the panel?
+### ➖ Remove a Question
 
-You can remove a question from the panel using this command:
+To remove a specific question from a panel:
 
 ```sh
 /tickets questions remove <panel> <question>
 ```
 
-## How can I edit a question?
+---
 
-To edit an existing question, use the command below:
+### ✏️ Edit a Question
+
+To modify an existing question:
 
 ```sh
 /tickets questions edit <panel> <question>
 ```
 
-## How can I see a list of all the questions for the panel?
+---
 
-You can view a list of all questions assigned to a panel with this command:
+### 📋 List All Questions
+
+To view all the questions currently assigned to a panel:
 
 ```sh
 /tickets questions list <panel>
 ```
+
+---
+
+✅ You're all set! Enjoy your fully customizable ticketing system.
