@@ -1,0 +1,46 @@
+---
+title: Reaction Roles
+description: Let members assign themselves roles by reacting to messages.
+icon: "face-smile"
+iconType: "solid"
+---
+
+**Reaction Roles** let you assign roles to members when they react to a specific message. It’s a great way to let users customize their experience or access different parts of your server—all with a simple emoji reaction.
+
+This feature helps automate role management and encourages member engagement with minimal effort.
+
+## ⚙️ Permissions Required
+You must have the `Administrator` permission to use this command.
+
+## ✨ Subcommands
+
+### ➕ `/reactionroles add <message_url> <emoji> <role>`
+Adds a reaction role to a message.
+
+- `message_url`: Right-click the target message and "Copy Message Link"
+- `emoji`: The emoji that will trigger the role assignment
+- `role`: The role to assign when the emoji is used
+
+**Example:**
+```sh
+/reactionroles add https://discord.com/channels/... 🔥 @Gamer
+```
+
+### ➖ `/reactionroles remove <message_url> <emoji>`
+Removes a reaction role from a message.
+
+**Example:**
+```sh
+/reactionroles remove https://discord.com/channels/... 🔥
+```
+
+### 📜 `/reactionroles list`
+Lists all active reaction roles in your server.
+
+## 🖱️ Quick Tip
+You can also right-click a message, go to **Apps > Remove Reaction Role**, and remove it from there.
+
+## 🧠 Notes
+- The bot needs **Manage Roles** and **Read Message History** permissions in the target channel.
+- Roles will only be given if the bot’s role is **above** the target role in the server role hierarchy.
+- For help, use `/help` and look under the **Roles** category.

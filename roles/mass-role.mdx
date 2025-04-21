@@ -1,0 +1,65 @@
+---
+title: Mass Role
+description: Add or remove a role from a member or a group of members at once.
+icon: "users"
+iconType: "solid"
+---
+
+The **Mass Role** command allows server administrators to quickly assign or remove a specific role from one member or multiple members at once. It's especially useful for managing large servers where manual role updates would be inefficient.
+
+Whether you want to grant a role to everyone in a particular role or remove access from many users at once, this command simplifies the task.
+
+## ⚙️ Permissions Required
+You must have the `Administrator` permission to use this command.
+
+## ℹ️ How to Use
+To use the Mass Role command, simply type `/massrole` followed by the action you want to perform (add or remove), the target (user or role), and the role you want to assign or remove.
+When you run the command for the first time you will be prompted to confirm your action.
+<Frame caption="Mass Role Confirmation">
+    <img src="/images/roles/mass-role/example-confirm-prompt.png" alt="Mass Role Confirmation"/>
+</Frame>
+
+After that the bot will start the action.
+<Frame caption="Mass Role Action">
+    <img src="/images/roles/mass-role/example-start-action.png" alt="Mass Role Action"/>
+</Frame>
+
+When the action is finished, the bot will send a message in the channel where you ran the command.
+<Frame caption="Mass Role Finished">
+    <img src="/images/roles/mass-role/example-action-finished.png" alt="Mass Role Finished"/>
+</Frame>
+
+
+## ✨ Subcommands
+
+### ➕ `/massrole add <mention> <role>`
+Assigns the specified role to a single user or to all members who currently have a specific role.
+
+- `mention`: A user or role mention.
+- `role`: The role you want to assign.
+
+**Examples:**
+```sh
+/massrole add @User @Verified
+/massrole add @Members @Event
+```
+
+### ➖ `/massrole remove <mention> <role>`
+Removes the specified role from a single user or from all members of a specified role.
+
+**Examples:**
+```sh
+/massrole remove @User @Beta
+/massrole remove @OldMembers @Tester
+```
+
+### ⏹️ `/massrole stop`
+Stops a running mass-role action if one is in progress.
+
+### 🔎 `/massrole status`
+Displays the current status of any ongoing mass-role process.
+
+## 🔔 Notes
+- The command is powerful—use it carefully, especially when targeting large roles.
+- Only one mass-role operation can run at a time.
+- Mass-role actions may take some time to complete depending on server size.

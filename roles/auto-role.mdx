@@ -1,0 +1,46 @@
+---
+title: Auto Role
+description: Automatically assign roles to new users and bots when they join your server.
+icon: "user-tag"
+iconType: "solid"
+---
+
+The **Auto Role** feature allows you to automatically assign roles to members as soon as they join your server. This helps with onboarding, access control, and organizing your community more efficiently.
+
+You can configure separate roles for **users** and **bots**, ensuring each type gets the appropriate permissions right from the start.
+
+<Frame caption="Example Auto Role">
+    <img src="/images/roles/auto-role/example-auto-role.png" alt="Example Auto Role"/>
+</Frame>
+
+## ⚙️ Permissions Required
+You must have the `Administrator` permission to use this command.
+
+## ✨ Subcommands
+
+### ➕ `/autorole add <role> [bots]`
+Adds a role to the auto-role list.
+
+- `role`: The role to assign automatically.
+- `bots` (optional): Set to `True` if the role should be assigned to bots only. Leave blank or `False` for regular members.
+
+**Examples:**
+```sh
+/autorole add @Member
+/autorole add @BotRole True
+```
+
+### ➖ `/autorole remove <role>`
+Removes a role from the auto-role list.
+
+```sh
+/autorole remove @Member
+```
+
+### 📜 `/autorole list`
+Lists all roles currently set for auto assignment. Roles assigned to bots will be shown with a `[Bots]` suffix.
+
+## 🧠 Notes
+- You can assign multiple roles for both users and bots.
+- Auto Role works immediately when a user or bot joins your server.
+- Ensure the bot has permission to assign the roles listed in your auto-role settings.

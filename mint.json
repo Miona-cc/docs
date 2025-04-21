@@ -87,7 +87,18 @@
       "iconType": "solid",
       "group": "More Features",
       "pages": [
-        "more-features/giveaway"
+        "more-features/giveaway",
+        "more-features/autoresponders"
+      ]
+    },
+    {
+      "icon": "user-tag",
+      "iconType": "solid",
+      "group": "Roles",
+      "pages": [
+        "roles/auto-role",
+        "roles/mass-role",
+        "roles/reaction-roles"
       ]
     },
     {

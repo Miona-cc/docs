@@ -1,0 +1,53 @@
+---
+title: Auto Responders
+description: Automatically respond to messages using triggers and actions
+icon: "robot"
+iconType: "solid"
+---
+
+🤖 **Auto Responders**
+
+Auto Responders allow you to set up automatic replies or reactions based on specific triggers. This feature is useful for answering common questions, acknowledging certain phrases, or enhancing interactivity in your server.
+<Frame>
+    <img src="/images/autoresponders/example-autoresponder.png" alt="Example autoresponder"/>
+</Frame>
+## 🔥 Features
+
+✅ Trigger-based responses – Supports plain text and regex patterns  
+✅ Two response types – Send a message or react with an emoji  
+✅ Easy management – Edit, import, and delete with simple commands  
+
+## 🛠️ Commands
+
+### 🔹 Create an Auto Responder
+```sh
+/autoresponders create <name> <trigger> <response-type> [channel]
+```
+- **Name**: (Optional) Used to organize your responders  
+- **Trigger**: A text string or regular expression  
+- **Response Type**: `message`, `reaction` or `role` 
+- **Channel**: (Optional) Restrict the responder to a specific channel
+
+### 🔹 Edit the Response
+```sh
+/autoresponders edit-response <auto-responder>
+```
+Modify the message that will be sent when the responder is triggered.
+
+### 🔹 Import a Saved Embed
+```sh
+/autoresponders import-embed <auto-responder> <embed>
+```
+Use a saved embed as the response for an auto responder.
+
+### 🔹 Delete an Auto Responder
+```sh
+/autoresponders delete <auto-responder>
+```
+Remove an existing auto responder.
+
+### 🔹 View All Auto Responders
+```sh
+/autoresponders list
+```
+See a list of all active auto responders.
