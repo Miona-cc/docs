@@ -1,0 +1,101 @@
+---
+title: Invite Tracker
+description: Track and manage invites and inviters in your server.
+icon: "user-plus"
+iconType: "solid"
+---
+
+The **Invite Tracker** allows administrators to monitor how members join the server, keep track of fake or leave-based invites, and reward users who invite others. It's a powerful system for growing and moderating communities.
+
+## ⚙️ Permissions Required
+You must have either the `Administrator` or `Manage Server` (`ManageGuild`) permission to use these commands.
+
+## ✨ Subcommands
+
+### 🎚️ `/invitetracker toggle [enabled]`
+Enables or disables the invite tracker.
+
+- `enabled`: `True` to enable, `False` to disable.
+
+### 🧪 `/invitetracker fake-treshold [treshold]`
+Sets the threshold in days for account age. Invites from accounts newer than this will be flagged as **fake**.
+
+- `treshold`: The minimum account age in **days**.
+
+**Example:**  
+```sh
+/invitetracker fake-treshold 7
+````
+
+### 🧹 `/invitetracker reset-server-invites`
+
+Resets all invite counts for all users in the server. **Use with caution.**
+
+---
+
+### 🎁 `/invitetracker add-bonus-invites <user> <invites>`
+
+Adds bonus invites to a user or a role.
+
+* `user`: A specific user or role.
+* `invites`: Number of bonus invites to add.
+
+**Example:**
+
+```sh
+/invitetracker add-bonus-invites @User 5
+```
+
+### ➖ `/invitetracker remove-bonus-invites <user> <invites>`
+
+Removes bonus invites from a user or a role.
+
+---
+
+### 🚫 `/invitetracker remove-fakes <user>`
+
+Removes **fake invites** attributed to a user or role.
+
+### 🚪 `/invitetracker remove-leaves <user>`
+
+Removes **leave invites** attributed to a user or role (when people who were invited leave the server).
+
+---
+
+### 📄 `/invitetracker variables`
+
+Displays all variables you can use in join and leave messages for invite logs.
+
+You can also visit the [variables page](/variables#invite-tracker-variables) for more details.
+
+---
+
+### 📢 `/invitetracker logs [channel]`
+
+Sets or displays the channel used for invite logging.
+
+* `channel`: The target channel for invite logs.
+
+---
+
+### 📝 `/invitetracker edit-join-message`
+
+Edit the message that appears when someone joins using an invite.
+
+### 📝 `/invitetracker edit-leave-message`
+
+Edit the message that appears when someone leaves the server.
+
+### 📊 `/invites`
+
+View your Total Invites, Bonus Invites and more in the server.
+
+### `/invite-codes`
+
+View all of your invite links in the server.
+
+## 🔔 Notes
+
+* The system tracks real, fake, and leave-based invites.
+* Bonus invites can help you manually reward users without actual invites.
+* Use [variables](/variables#invite-tracker-variables) in custom messages to show dynamic info like `{user}`, `{inviter}`, `{invites}`, etc.

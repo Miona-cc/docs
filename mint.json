@@ -98,7 +98,8 @@
       "group": "More Features",
       "pages": [
         "more-features/giveaway",
-        "more-features/autoresponders"
+        "more-features/autoresponders",
+        "more-features/invites-tracker"
       ]
     },
     {
