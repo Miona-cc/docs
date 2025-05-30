@@ -1,0 +1,81 @@
+---
+title: Vanity Roles
+description: Reward members who promote your server with custom roles.
+icon: "link"
+iconType: "solid"
+---
+
+**Vanity Roles** let you automatically assign roles to users who include your server’s invite link (like `discord.gg/miona`) in their custom status. It’s a powerful tool to reward those who help promote your community.
+
+This feature helps boost visibility and encourages engagement through personalized recognition.
+<Note>
+**Note:** This feature is **limited to 100 servers**. To get a slot, your server must meet the requirements and be manually approved.
+</Note>
+## 📝 Requirements to Access
+
+- Your server must have **at least 14 Discord boosts**
+- You must have a **vanity invite link** (e.g., `discord.gg/miona`)
+- You must **join our support server** and **create a ticket** to request a slot
+
+[Join Support Server](https://discord.gg/JD2KZJCTFt)
+
+## ⚙️ Permissions Required
+You must have the `Administrator` permission to use these commands.
+
+## ✨ Subcommands
+
+### 🔧 `/vanity setup <vanity> <role> [logs] [color]`
+Initializes the Vanity Roles feature in your server.
+
+- `vanity`: Your server's invite code (e.g., `/miona`)
+- `role`: The role to assign to users who promote your server
+- `logs`: *(Optional)* Channel to log vanity detections
+- `color`: *(Optional)* Embed color in HEX (e.g., `#5865F2`)
+
+**Example:**
+```sh
+/vanity setup /miona @Promoter #logs #5865F2
+````
+
+### ➕ `/vanity add <vanity>`
+
+Adds an additional vanity link to track.
+
+**Example:**
+
+```sh
+/vanity add miona
+```
+
+### ➖ `/vanity remove <vanity>`
+
+Removes a tracked vanity link.
+
+**Example:**
+
+```sh
+/vanity remove /miona
+```
+
+### 📋 `/vanity list`
+
+Lists all currently tracked vanity links in your server.
+
+### ⛔ `/vanity stop`
+
+Stops the Vanity Roles feature and untracks all links.
+
+### 📢 `/vanity logs <channel>`
+
+Sets the channel for logging vanity activity.
+
+### 🎨 `/vanity color <color>`
+
+Changes the color of the vanity role embed messages.
+
+## 🧠 Notes
+
+* The bot requires the **Manage Roles** and **Send Messages** permissions.
+* The role to assign must be **below the bot’s role** in the server hierarchy.
+
+Need assistance? [Join our support server](https://discord.gg/JD2KZJCTFt) and open a ticket.

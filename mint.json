@@ -89,7 +89,8 @@
       "pages": [
         "roles/auto-role",
         "roles/mass-role",
-        "roles/reaction-roles"
+        "roles/reaction-roles",
+        "roles/vanity-roles"
       ]
     },
     {
