@@ -49,8 +49,6 @@ Ticket variables can be used withing Ticket Welcome Messages `/tickets edit-welc
 - `{category_name}` - The name of the category - ex. Support
 - `{category_label}` - The name of the category - ex. Support
 - `{category_description}` - The description of the category (Used with Select Menu Ticket Panels)
-- `{category_id}` - The ID of the category - ex. support-random (rarely used)
-- `{category_count}` - The number of categories in the server ex. 2 (rarely used)
 ### Ticket Name Format Variables
 These variables can be used when editing the Ticket name format `/tickets format`
 - `{member_name}` - The name of the member - ex. piton01
@@ -92,5 +90,16 @@ If you want to replace information about the member in invite messages, you can 
 </Note>
 ### General Variables
 These variables can be used with all messages:
-- `{date}` - The current date - ex. 7/6/2017
-- `{time}` - The current time - ex. 12:00 PM
+
+#### Current Time Variables
+These variables insert the current time (when the message is sent / rendered):
+
+- `{short_time}` - Current time in 24h HH:MM format - ex. 15:03
+- `{short_date}` - Current date in M/D/YYYY format - ex. 8/21/2025
+- `{short_date_time}` - Current date & time in D Mon YYYY HH:MM format - ex. 21 Aug 2025 15:03
+- `{long_time}` - Current time in HH:MM:SS (24h) format - ex. 15:03:37
+- `{long_date}` - Current date in Day Month YYYY (long with ordinal) - ex. 21st August 2025
+- `{long_date_time}` - Current date & time with weekday - ex. Thursday, 21st August 2025 15:03
+- `{relative_time}` - Relative time from now (human readable) - ex. a minute ago
+
+
