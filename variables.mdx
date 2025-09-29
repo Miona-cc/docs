@@ -88,6 +88,20 @@ These variables are used to replace information about the inviter who invited th
 <Note>
 If you want to replace information about the member in invite messages, you can use the [Member Variables](#member-variables) from above.
 </Note>
+
+### Thread Variables
+These variables can be used when configuring the Auto Thread feature:
+- `{message_content}` - The content of the original message - ex. Hello World
+- `{thread_name}` - The name of the thread - ex. general
+- `{thread_mention}` - The mention of the thread - ex. #general
+- `{thread_id}` - The ID of the thread - ex. 332434816601554945
+- `{thread_created}` - When the thread was created - ex. 7/6/2017
+<Warning>
+These variables can **ONLY** be used with the Auto Thread feature and its custom messages.
+</Warning>
+<Note>
+If you want to get the author of the original message, you can use the [Member Variables](#member-variables) from above.
+</Note>
 ### General Variables
 These variables can be used with all messages:
 
