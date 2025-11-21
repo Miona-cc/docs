@@ -1,0 +1,107 @@
+---
+
+```md
+---
+title: Mentions
+description: 'How to mention Discord users, roles, and channels inside Miona messages'
+icon: "stars"
+iconType: "solid"
+---
+
+When customizing your messages in **Miona**, you may want to mention Discord roles, channels, or users. Discord uses a special formatting syntax for these mentions. Below is a full guide on how to use them inside your Miona message templates.
+
+---
+
+## 🧩 Mentioning Roles
+To mention a role, use the following format:
+
+```
+
+<@&ROLE_ID>
+
+```
+
+Replace `ROLE_ID` with the actual ID of the role.
+
+**Example:**
+```
+
+<@&123456789012345678>
+
+```
+
+---
+
+## 📺 Mentioning Channels
+To mention a channel, use:
+
+```
+
+<#CHANNEL_ID>
+
+```
+
+Replace `CHANNEL_ID` with the ID of the channel you want to reference.
+
+**Example:**
+```
+
+<#987654321098765432>
+
+```
+
+---
+
+## 👤 Mentioning Users
+To mention a user directly, use:
+
+```
+
+<@USER_ID>
+
+```
+
+**Example:**
+```
+
+<@112233445566778899>
+
+```
+
+---
+
+## 🔧 Dynamic Mentions (Using Miona Variables)
+Miona supports dynamic variables that let you mention users involved in events without manually inserting their IDs.
+
+You can use:
+
+```
+
+<@{member_id}>
+
+```
+
+or simply:
+
+```
+
+{member_mention}
+
+```
+
+These will automatically mention the relevant member when the message is sent.
+
+---
+
+## ✔ Summary
+| Entity       | Format              | Example                         |
+|--------------|----------------------|---------------------------------|
+| Role         | `<@&ROLE_ID>`       | `<@&123456789012345678>`        |
+| Channel      | `<#CHANNEL_ID>`     | `<#987654321098765432>`         |
+| User         | `<@USER_ID>`        | `<@112233445566778899>`         |
+| Dynamic User | `{member_mention}`  | Mentions user automatically      |
+
+---
+
+This formatting works in both Discord messages and Miona's message builder, ensuring your bot sends clean, functional mentions every time.
+
