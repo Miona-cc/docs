@@ -107,7 +107,7 @@
       "anchors": [
         {
           "anchor": "Support",
-          "href": "https://discord.gg/eAczFraFdJ",
+          "href": "https://discord.gg/52nsdaGpDx",
           "icon": "discord"
         },
         {
@@ -126,7 +126,7 @@
     "links": [
       {
         "label": "Support",
-        "href": "https://discord.gg/eAczFraFdJ"
+        "href": "https://discord.gg/52nsdaGpDx"
       }
     ],
     "primary": {
@@ -137,7 +137,7 @@
   },
   "footer": {
     "socials": {
-      "discord": "https://discord.gg/miona",
+      "discord": "https://discord.gg/52nsdaGpDx",
       "github": "https://github.com/miona-cc"
     }
   }

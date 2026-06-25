@@ -19,7 +19,7 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "https://discord.gg/eAczFraFdJ"
+      "url": "https://discord.gg/52nsdaGpDx"
     }
   ],
   "topbarCtaButton": {
@@ -36,7 +36,7 @@
     {
       "name": "Support",
       "icon": "discord",
-      "url": "https://discord.gg/eAczFraFdJ"
+      "url": "https://discord.gg/52nsdaGpDx"
     },
     {
       "name": "Embed Builder",
@@ -121,7 +121,7 @@
     }
   ],
   "footerSocials": {
-    "discord": "https://discord.gg/miona",
+    "discord": "https://discord.gg/52nsdaGpDx",
     "github": "https://github.com/miona-cc"
   }
 }
