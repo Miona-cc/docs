@@ -1,0 +1,144 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Miona Docs",
+  "colors": {
+    "primary": "#a855f7",
+    "light": "#c084fc",
+    "dark": "#a855f7"
+  },
+  "favicon": "images/logo.png",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "variables",
+              "mentions"
+            ]
+          },
+          {
+            "group": "AutoPost",
+            "pages": [
+              "autopost/autopfp",
+              "autopost/automatch",
+              "autopost/automeme"
+            ]
+          },
+          {
+            "group": "Greeting",
+            "icon": {
+              "name": "hand-wave",
+              "style": "solid"
+            },
+            "pages": [
+              "greeting/welcome",
+              "greeting/leave",
+              "greeting/boost",
+              "greeting/joindm",
+              "greeting/poj"
+            ]
+          },
+          {
+            "group": "Tickets",
+            "icon": {
+              "name": "ticket",
+              "style": "solid"
+            },
+            "pages": [
+              "tickets/panel",
+              "tickets/category",
+              "tickets/questions"
+            ]
+          },
+          {
+            "group": "Roles",
+            "icon": {
+              "name": "user-tag",
+              "style": "solid"
+            },
+            "pages": [
+              "roles/auto-role",
+              "roles/mass-role",
+              "roles/reaction-roles",
+              "roles/vanity-roles"
+            ]
+          },
+          {
+            "group": "More Features",
+            "icon": {
+              "name": "party-horn",
+              "style": "solid"
+            },
+            "pages": [
+              "more-features/giveaway",
+              "more-features/autoresponders",
+              "more-features/invites-tracker"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "API Documentation",
+            "pages": [
+              "api-reference/introduction"
+            ]
+          },
+          {
+            "group": "Endpoint",
+            "pages": [
+              "api-reference/endpoint/count",
+              "api-reference/endpoint/image",
+              "api-reference/endpoint/random",
+              "api-reference/endpoint/match"
+            ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Support",
+          "href": "https://discord.gg/eAczFraFdJ",
+          "icon": "discord"
+        },
+        {
+          "anchor": "Embed Builder",
+          "href": "https://messages.miona.bot",
+          "icon": "newspaper"
+        }
+      ]
+    }
+  },
+  "logo": {
+    "light": "/images/logo/light.svg",
+    "dark": "/images/logo/dark.svg"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "https://discord.gg/eAczFraFdJ"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Website",
+      "href": "https://miona.bot"
+    }
+  },
+  "footer": {
+    "socials": {
+      "discord": "https://discord.gg/miona",
+      "github": "https://github.com/miona-cc"
+    }
+  }
+}
